@@ -2,7 +2,7 @@
 
 ## Project Status
 - **Repository**: https://github.com/jadaunaryansingh/Legally
-- **Current Branch**: `Agents`
+- **Deployment Branch**: `main` ✅
 - **Remote**: Already connected to GitHub ✅
 
 ## Environment Variables (from .env file)
@@ -23,8 +23,11 @@ git add .
 # Commit with descriptive message
 git commit -m "Configure Vercel deployment: Add Mangum handler, update API URLs, add Vercel config files"
 
-# Push to GitHub
+# Push to GitHub (if on Agents branch)
 git push origin Agents
+
+# Or if working on main branch
+git push origin main
 ```
 
 ## Step 2: Deploy to Vercel
@@ -35,7 +38,7 @@ git push origin Agents
 2. **Import Git Repository**: 
    - Click "Import Git Repository"
    - Select: `jadaunaryansingh/Legally`
-   - Branch: `Agents`
+   - Branch: `main` (production branch)
 3. **Configure Project**:
    - Framework Preset: **Other** (or Vite if available)
    - Root Directory: `./` (root)
@@ -117,10 +120,10 @@ After deployment, test these URLs:
 ## Quick Deploy Commands Summary
 
 ```bash
-# 1. Commit and push
+# 1. Commit and push (if on main branch)
 git add .
 git commit -m "Deploy to Vercel"
-git push origin Agents
+git push origin main
 
 # 2. Deploy (if using CLI)
 vercel --prod

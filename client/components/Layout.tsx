@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ReactNode } from "react";
-import { firebaseSignOut, auth } from "@/services/firebase";
+import { firebaseSignOut } from "@/services/firebase";
 
 interface LayoutProps {
   children: ReactNode;
@@ -71,7 +71,7 @@ export default function Layout({ children }: LayoutProps) {
               <button
                 onClick={async () => {
                   try {
-                    await firebaseSignOut(auth);
+                    await firebaseSignOut();
                     localStorage.removeItem("isAuthenticated");
                     localStorage.removeItem("userEmail");
                     localStorage.removeItem("userId");
