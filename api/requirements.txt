@@ -1,5 +1,5 @@
 fastapi
-uvicorn
+mangum
 python-dotenv
 huggingface_hub
 pydantic
@@ -7,4 +7,4 @@ langchain
 langchain-huggingface
 langgraph
 langchain-community
-mangum
+
