@@ -1,8 +1,9 @@
 {
   "version": 2,
   "buildCommand": "corepack enable && pnpm install --frozen-lockfile && pnpm run build:client",
-  "installCommand": "",
+  "installCommand": "corepack enable && pnpm install --frozen-lockfile",
   "outputDirectory": "dist/spa",
+  "framework": null,
   "functions": {
     "api/index.py": {
       "runtime": "python3.11",
