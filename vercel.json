@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "installCommand": "corepack enable && corepack prepare pnpm@10.14.0 --activate && pnpm install --frozen-lockfile",
-  "buildCommand": "corepack enable && corepack prepare pnpm@10.14.0 --activate && pnpm run build:client",
+  "buildCommand": "corepack enable && pnpm install --frozen-lockfile && pnpm run build:client",
+  "installCommand": "",
   "outputDirectory": "dist/spa",
   "functions": {
     "api/index.py": {

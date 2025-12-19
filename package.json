@@ -2,6 +2,7 @@
   "name": "legally",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@10.14.0",
   "pkg": {
     "assets": [
       "dist/spa/*"
