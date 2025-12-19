@@ -11,9 +11,12 @@ interface Message {
   timestamp?: Date;
 }
 
-// Use FastAPI + Hugging Face backend endpoint (configured via Vite env or default localhost)
+// Use FastAPI + Hugging Face backend endpoint
+// In production (Vercel), use relative URL to hit serverless function
+// In development, use explicit localhost URL
 const LEGAL_API_URL =
-  import.meta.env.VITE_LEGAL_API_URL || "http://localhost:8000/api/legal-advice";
+  import.meta.env.VITE_LEGAL_API_URL ||
+  (import.meta.env.PROD ? "/api/legal-advice" : "http://localhost:8000/api/legal-advice");
 
 export default function Chat() {
   const [messages, setMessages] = useState<Message[]>([
